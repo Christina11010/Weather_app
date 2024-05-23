@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background: linear-gradient(135deg, #679186, #fdebd3);
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #e0ebe9;
+    margin: 0 auto 20px;
+    padding: 40px 48px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: #1c384a;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #c1d7d3;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 12px 42px;
+    background: #679186;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px;
+    user-select: none;
+    /* when double clicking the element, the text won't be selected */
+    cursor: pointer;
+    position: relative;
+    /* the position of the list item is relative to the position of the checking box */
+
+}
+/* inserting the check box before the list items
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+} */
+
+ul li.checked {
+    color: #bbd4ce;
+    text-decoration: line-through;
+}
+/* 
+ul li.checked::before {
+    background-image: url(images/checked.png);
+} */
+
+/* css for the cross button */
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #1c384a;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%; /* make the cross button background circle */
+}
+
+ul li span:hover{
+    background: #c1d7d3;
+}
+
+footer {
+    background: linear-gradient(330deg, rgba(253,235,211, 0.6),rgba(103,145,134, 0.6));
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    color: #679186;
+}
